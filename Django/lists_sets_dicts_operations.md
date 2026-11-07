@@ -88,6 +88,25 @@ Metody `keys()`, `values()` i `items()` udostępniają odpowiednio klucze, warto
 kwadraty = {x: x ** 2 for x in range(5)}
 ```
 
+### Operacje statystyczne na elementach listy
+
+Dla listy liczb można użyć wbudowanych funkcji `sum()`, `min()` i `max()`. Średnią arytmetyczną i medianę udostępnia moduł `statistics`:
+
+```python
+import statistics
+
+liczby = [3, 1, 2, 1]
+suma = sum(liczby)                         # 7
+minimum = min(liczby)                     # 1
+maksimum = max(liczby)                    # 3
+srednia = statistics.mean(liczby)          # 1.75
+mediana = statistics.median(liczby)        # 1.5
+```
+
+Funkcje te wymagają danych liczbowych; dla pustej listy `min()` i `max()` zgłaszają `ValueError`, a `statistics.mean()` i `statistics.median()` — `StatisticsError`.
+
+
+
 ## Wybór kolekcji
 
 - **Lista** — gdy liczy się kolejność, indeksowanie lub powtarzające się elementy.
