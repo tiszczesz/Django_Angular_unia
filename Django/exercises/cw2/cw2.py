@@ -5,6 +5,7 @@ def main():
   print(numbers)
   print(sorted(numbers))
   print(f"statystyki: {functions.getStatistics(numbers)}")
+  print(f"statystyki: {functions.getStatInDict(numbers)}")
 
 if __name__ == "__main__":
     main()

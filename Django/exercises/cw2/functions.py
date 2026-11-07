@@ -1,5 +1,6 @@
 from random import randint
 import sys
+
 def generRandoms(howMany):
     numbers = [] # pusta lista liczb
     #todo
@@ -25,4 +26,12 @@ def getStatistics(data):
     return (sum,min,max,round(sum/len(data),2))
 
 def getStatInDict(data):
-    pass # statystyki w słowniku
+    if len(data) == 0 :
+            return ("BRAK DANYCH")
+    return {
+        "suma: ":sum(data),
+        "minimum: ":min(data),
+        "maksimum: ": max(data),
+        "średnia: ": round(sum(data)/len(data),2),
+        }
+    
