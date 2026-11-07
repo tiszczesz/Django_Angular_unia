@@ -9,7 +9,7 @@ def main():
     print(__file__)
     print(__name__)
     functions.Welcome()
-    print(functions.Other(5,2.56))
+    print(round(functions.Other(5,2.56),2))
     print(Other(4,90))
 
 # wywołanie funkcji
