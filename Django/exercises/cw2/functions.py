@@ -5,7 +5,7 @@ def generRandoms(howMany):
     numbers = [] # pusta lista liczb
     #todo
     for _ in range(howMany):
-        numbers.append(randint(0,100)) # dodajemy kolejno nowe losowe
+        numbers.append(randint(0,20)) # dodajemy kolejno nowe losowe
     return numbers
 
 def getStatistics(data):
@@ -34,4 +34,14 @@ def getStatInDict(data):
         "maksimum: ": max(data),
         "średnia: ": round(sum(data)/len(data),2),
         }
-    
+
+def distinc(data):
+    #zwraca bez powtórzeń
+    return set(data)
+
+def counter(data):
+    counts = {}
+    for number in data:
+        counts[number] = counts.get(number, 0) + 1
+    return counts
+       
